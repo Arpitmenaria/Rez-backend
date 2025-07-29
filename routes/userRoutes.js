@@ -42,17 +42,15 @@ router.get('/', async (req, res) => {
   }
 });
 // GET /api/users/:phone
-router.get('/:phone', async (req, res) => {
+router.get("/:phone", async (req, res) => {
   try {
-    console.log("Looking for phone:", req.params.phone);
     const user = await User.findOne({ phone: req.params.phone });
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
     res.json(user);
-  } catch (error) {
-    console.error("Error fetching user:", error);
-    res.status(500).json({ message: "Server error" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
 });
 

@@ -1,0 +1,23 @@
+# Backend - MERN Stack User Wallet API
+This is the **Node.js + Express** backend for handling user registration, lookup, and storage. It connects to MongoDB and provides RESTful APIs to be consumed by the frontend.
+
+# Features
+- Register new users
+- Fetch user by phone number
+- MongoDB with Mongoose
+- Express.js REST APIs
+- CORS enabled
+
+# Technologies Used
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- dotenv
+- CORS
+- Nodemon (for development)
+
+# Setup Instructions
+1. Navigate to the backend directory:
+
+```bash
+cd server
